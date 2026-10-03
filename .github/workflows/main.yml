@@ -20,9 +20,10 @@ jobs:
         python-version: '3.11'
 
     - name: Install dependencies & Run Tests
+      working-directory: ./python_code
       run: |
         pip install pytest
-        pytest python_code/test_main.py
+        pytest test_main.py
 
     # 3. Собираем Docker-образ, чтобы убедиться, что Dockerfile корректен
     - name: Build Docker Image
