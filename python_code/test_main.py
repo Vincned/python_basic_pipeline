@@ -1,6 +1,5 @@
-def check_ip(ip: str) -> bool:
-    return ip.startswith('192.168.')
+from python_code.test_main import check_ip
 
-if __name__ == "__main__":
-    test_ip = "192.168.1.0"
-    print(f'Checking ip {test_ip}: {check_ip(test_ip)}')
+def test_check_ip():
+    assert check_ip("192.168.11.2") is True
+    assert check_ip("100.32.15.1") is False
