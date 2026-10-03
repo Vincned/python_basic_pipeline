@@ -28,4 +28,4 @@ jobs:
     # 3. Собираем Docker-образ, чтобы убедиться, что Dockerfile корректен
     - name: Build Docker Image
       run: |
-        docker build -t my-app:latest .
+        docker build -f docker/Dockerfile -t my-app:latest .
