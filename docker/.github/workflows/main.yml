@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies & Run Tests
       run: |
         pip install pytest
-        pytest test_main.py
+        pytest python_code/test_main.py
 
     # 3. Собираем Docker-образ, чтобы убедиться, что Dockerfile корректен
     - name: Build Docker Image
